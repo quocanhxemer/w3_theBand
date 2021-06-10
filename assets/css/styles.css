@@ -159,6 +159,8 @@ html {
   margin: 15px 0;
 }
 
+/* content-about */
+
 .content-box .content-about {
   margin: 15px 0;
   font-size: 1.5em;
@@ -182,6 +184,8 @@ html {
 .content-box .team-members .member-photo img {
   width: 154px;
 }
+
+/* content-tickets */
 
 .ticket-info {
   background-color: #ffffff;
@@ -258,4 +262,11 @@ html {
 
 .ticket-place__info__item.ticket-time {
   opacity: 0.5;
+}
+
+/* content-contact */
+
+.contact-box {
+  display: flex;
+  justify-content: space-between;
 }
