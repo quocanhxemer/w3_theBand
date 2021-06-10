@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -10,6 +10,7 @@ html {
 
 .button {
   padding: 8px 16px;
+  border: none;
   background-color: #000000;
   color: #ffffff;
   line-height: 1.6;
@@ -136,7 +137,7 @@ html {
 }
 
 .content-box {
-  padding: 64px 16px;
+  padding: 64px 0;
   max-width: 764px;
   text-align: center;
   margin: 0 auto;
@@ -267,6 +268,69 @@ html {
 /* content-contact */
 
 .contact-box {
+  padding: 32px 0;
   display: flex;
   justify-content: space-between;
+}
+
+.contact-box__info {
+  text-align: left;
+  font-size: 1.8em;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.contact-icon {
+  min-width: 30px;
+}
+
+.contact-box__form {
+  width: 384px;
+}
+
+.contact-box__form input {
+  padding: 8px;
+  width: 100%;
+  margin: 5px 0;
+  font-size: 1.5em;
+}
+
+.form-input-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-input-group input {
+  width: 184px;
+}
+
+.contact-box__form button {
+  float: right;
+}
+
+/* FOOTER */
+#footer {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 64px 16px;
+  text-align: center;
+  font-size: 2em;
+}
+
+#footer i {
+  opacity: 0.6;
+  letter-spacing: 2px;
+}
+
+#footer i:hover {
+  opacity: 0.3;
+}
+
+#footer p {
+  font-size: 0.8em;
+  opacity: 0.6;
+  margin: 15px 0;
+}
+
+#footer p a{
+  color: #000000;
 }
