@@ -18,7 +18,7 @@ html {
   width: fit-content;
 }
 
-.layer {
+.layer.active {
   position: fixed;
   left: 0;
   right: 0;
@@ -61,6 +61,10 @@ html {
 .header__nav-item__subnav {
   display: flex;
   flex-direction: column;
+}
+
+.header__nav-item:hover .subnav {
+  display: block;
 }
 
 .header__nav-item__subnav .subnav {
@@ -435,6 +439,10 @@ html {
   #header__nav {
     flex: 1;
   }
+  .header__nav-item__subnav .subnav {
+    color: #ffffff;
+    background-color: #000000;
+  }
 }
 
 /* TABLET RESPONSIVE */
@@ -446,6 +454,8 @@ html {
     width: 234px;
   }
 }
+
+/* PC RESPONSIVE */
 @media only screen and (min-width: 64em) {
   .button:hover {
     background-color: #cccccc;
@@ -455,9 +465,6 @@ html {
   .header__nav-item:hover > a {
     background-color: #cccccc;
     color: #000000;
-  }
-  .header__nav-item:hover .subnav {
-    display: block;
   }
   .header__nav-item__subnav .subnav:hover {
     background-color: #cccccc;

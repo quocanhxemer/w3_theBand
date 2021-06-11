@@ -39,6 +39,7 @@ const ticketDialog = {
     Array.from(buyTicketBtn).forEach((element) => {
       element.onclick = () => {
         $(".modal.ticket").style.display = "block";
+        $(".layer").classList.add("active");
       };
     });
   },
@@ -52,6 +53,7 @@ const ticketDialog = {
     closeOnClickArea.forEach((element) => {
       element.onclick = () => {
         $(".modal.ticket").style.display = "none";
+        $(".layer").classList.remove("active");
       };
     });
   },
@@ -66,12 +68,28 @@ ticketDialog.run();
 
 // MENU MOBILE - RESPONSIVE
 
-$("#header__menu-mobile").onclick = () => {
+function headerToggle() {
   $("#header").classList.toggle("mobile-active");
+  $("#header").style.zIndex = $("#header").style.zIndex == 10 ? 1 : 10;
+  $(".layer").classList.toggle("active");
+}
+
+$("#header__menu-mobile").onclick = () => {
+  headerToggle();
 };
-const navItems = $$(".header__nav-item");
+
+const navItems = $$(".header__nav-item:not(.dropdown)");
 Array.from(navItems).forEach((element) => {
   element.onclick = () => {
-    $("#header").classList.toggle("mobile-active");
+    headerToggle();
   };
 });
+
+$(".layer").onclick = () => {
+  if ($("#header").classList.contains("mobile-active")) {
+    headerToggle();
+  } else {
+    $(".modal.ticket").style.display = "none";
+    $(".layer").classList.remove("active");
+  }
+};
