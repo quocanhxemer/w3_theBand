@@ -178,8 +178,12 @@ html {
   margin: 15px 0;
 }
 
-.content-box .team-members .member-photo img {
+.content-box .team-members .member-photo {
   width: 154px;
+}
+
+.content-box .team-members .member-photo img {
+  width: 100%;
 }
 
 /* content-tickets */
@@ -446,6 +450,13 @@ html {
   .content-box {
     max-width: 340px;
   }
+  .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-box .team-members .member-photo {
+    width: 205px;
+  }
   .ticket-places {
     flex-direction: column;
   }
@@ -465,7 +476,7 @@ html {
   .contact-box__form input {
     width: 100%;
   }
-  .ticket-dialog{
+  .ticket-dialog {
     width: 90%;
   }
 }
