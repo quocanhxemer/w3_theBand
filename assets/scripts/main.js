@@ -80,7 +80,9 @@ $("#header__menu-mobile").onclick = () => {
   headerToggle();
 };
 
-const navItems = $$(".header__nav-item:not(.dropdown)");
+const navItems = $$(
+  ".header__nav-item:not(.dropdown):not(.header__nav-item:first-child)"
+);
 Array.from(navItems).forEach((element) => {
   element.onclick = () => {
     headerToggle();
