@@ -47,7 +47,7 @@ const ticketDialog = {
       $(".layer"),
       $(".ticket-dialog__header .close-btn"),
       $(".ticket-dialog__footer .close-btn.lower"),
-      $(".ticket-dialog__footer span a")
+      $(".ticket-dialog__footer span a"),
     ];
     closeOnClickArea.forEach((element) => {
       element.onclick = () => {
@@ -63,3 +63,15 @@ const ticketDialog = {
 
 slider.run();
 ticketDialog.run();
+
+// MENU MOBILE - RESPONSIVE
+
+$("#header__menu-mobile").onclick = () => {
+  $("#header").classList.toggle("mobile-active");
+};
+const navItems = $$(".header__nav-item");
+Array.from(navItems).forEach((element) => {
+  element.onclick = () => {
+    $("#header").classList.toggle("mobile-active");
+  };
+});
