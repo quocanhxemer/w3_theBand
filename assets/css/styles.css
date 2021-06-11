@@ -427,6 +427,10 @@ html {
 
 /* MOBILE - RESPONSIVE */
 @media only screen and (max-width: 46.1875em) {
+  .button {
+    width: 100%;
+    text-align: center;
+  }
   #header.mobile-active {
     height: auto;
   }
@@ -450,7 +454,7 @@ html {
   .content-box {
     max-width: 340px;
   }
-  .team-members {
+  .content-box .team-members {
     flex-direction: column;
     align-items: center;
   }
