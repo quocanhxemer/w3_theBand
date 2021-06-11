@@ -69,9 +69,11 @@ ticketDialog.run();
 // MENU MOBILE - RESPONSIVE
 
 function headerToggle() {
-  $("#header").classList.toggle("mobile-active");
-  $("#header").style.zIndex = $("#header").style.zIndex == 10 ? 1 : 10;
-  $(".layer").classList.toggle("active");
+  if (window.matchMedia("(max-width: 46.1875em)").matches) {
+    $("#header").classList.toggle("mobile-active");
+    $("#header").style.zIndex = $("#header").style.zIndex == 10 ? 1 : 10;
+    $(".layer").classList.toggle("active");
+  }
 }
 
 $("#header__menu-mobile").onclick = () => {
