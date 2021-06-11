@@ -109,7 +109,7 @@
                             <p class="ticket-place__info__item ticket-time">Fri 27 Nov 2016</p>
                             <p class="ticket-place__info__item">Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                             </p>
-                            <div class="button">Buy tickets</div>
+                            <div class="button popup-ticket">Buy tickets</div>
                         </div>
                     </div>
                     <div class="ticket-place">
@@ -119,7 +119,7 @@
                             <p class="ticket-place__info__item ticket-time">Sat 28 Nov 2016</p>
                             <p class="ticket-place__info__item">Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                             </p>
-                            <div class="button">Buy tickets</div>
+                            <div class="button popup-ticket">Buy tickets</div>
                         </div>
                     </div>
                     <div class="ticket-place">
@@ -129,8 +129,45 @@
                             <p class="ticket-place__info__item ticket-time">Sun 29 Nov 2016</p>
                             <p class="ticket-place__info__item">Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                             </p>
-                            <div class="button">Buy tickets</div>
+                            <div class="button popup-ticket">Buy tickets</div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TICKET DIALOG -->
+        <div class="modal ticket">
+            <div class="layer"> </div>
+            <div class="ticket-dialog">
+                <div class="ticket-dialog__header">
+                    <div class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <i class="fas fa-briefcase"></i> Tickets
+                </div>
+                <div class="ticket-dialog__body">
+                    <div class="ticket-dialog__form">
+                        <label for="tickets">
+                            <i class="fas fa-shopping-cart"></i>
+                            Tickets, $15 per person
+                        </label>
+                        <input type="text" name="tickets" id="tickets" placeholder="How many?">
+                        <label for="sendto">
+                            <i class="fas fa-user"></i>
+                            Send to
+                        </label>
+                        <input type="text" name="sendto" id="sendto" placeholder="Enter email">
+                        <div class="pay-btn">
+                            PAY <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    <div class="ticket-dialog__footer">
+                        <div class="close-btn lower">
+                            Close
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <span>Need <a href="#">help?</a></span>
                     </div>
                 </div>
             </div>

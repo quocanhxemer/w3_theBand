@@ -1,4 +1,5 @@
 const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 
 const slider = {
   slidersContent: [
@@ -32,4 +33,33 @@ const slider = {
   },
 };
 
+const ticketDialog = {
+  popUpHandle() {
+    const buyTicketBtn = $$(".popup-ticket");
+    Array.from(buyTicketBtn).forEach((element) => {
+      element.onclick = () => {
+        $(".modal.ticket").style.display = "block";
+      };
+    });
+  },
+  popUpCloseHandle() {
+    const closeOnClickArea = [
+      $(".layer"),
+      $(".ticket-dialog__header .close-btn"),
+      $(".ticket-dialog__footer .close-btn.lower"),
+      $(".ticket-dialog__footer span a")
+    ];
+    closeOnClickArea.forEach((element) => {
+      element.onclick = () => {
+        $(".modal.ticket").style.display = "none";
+      };
+    });
+  },
+  run() {
+    this.popUpHandle();
+    this.popUpCloseHandle();
+  },
+};
+
 slider.run();
+ticketDialog.run();
