@@ -443,6 +443,31 @@ html {
     color: #ffffff;
     background-color: #000000;
   }
+  .content-box {
+    max-width: 340px;
+  }
+  .ticket-places {
+    flex-direction: column;
+  }
+  .ticket-place {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .contact-box {
+    flex-direction: column;
+  }
+  .form-input-group {
+    flex-direction: column;
+  }
+  .contact-box__form {
+    width: 100%;
+  }
+  .contact-box__form input {
+    width: 100%;
+  }
+  .ticket-dialog{
+    width: 90%;
+  }
 }
 
 /* TABLET RESPONSIVE */
