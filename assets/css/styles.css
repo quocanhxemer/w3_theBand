@@ -276,11 +276,8 @@ html {
   }
 }
 
-.modal.ticket {
+#ticket-dialog {
   display: none;
-}
-
-.ticket-dialog {
   animation: slideDown 0.5s ease;
   position: fixed;
   z-index: 3;
@@ -480,7 +477,7 @@ html {
   .contact-box__form input {
     width: 100%;
   }
-  .ticket-dialog {
+  #ticket-dialog {
     width: 90%;
   }
 }

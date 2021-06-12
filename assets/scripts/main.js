@@ -38,7 +38,7 @@ const ticketDialog = {
     const buyTicketBtn = $$(".popup-ticket");
     Array.from(buyTicketBtn).forEach((element) => {
       element.onclick = () => {
-        $(".modal.ticket").style.display = "block";
+        $("#ticket-dialog").style.display = "block";
         $(".layer").classList.add("active");
       };
     });
@@ -52,7 +52,7 @@ const ticketDialog = {
     ];
     closeOnClickArea.forEach((element) => {
       element.onclick = () => {
-        $(".modal.ticket").style.display = "none";
+        $("#ticket-dialog").style.display = "none";
         $(".layer").classList.remove("active");
       };
     });
@@ -93,7 +93,7 @@ $(".layer").onclick = () => {
   if ($("#header").classList.contains("mobile-active")) {
     headerToggle();
   } else {
-    $(".modal.ticket").style.display = "none";
+    $("#ticket-dialog").style.display = "none";
     $(".layer").classList.remove("active");
   }
 };
