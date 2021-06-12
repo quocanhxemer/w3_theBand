@@ -449,7 +449,7 @@ html {
     background-color: #000000;
   }
   .content-box {
-    max-width: 340px;
+    max-width: 80%;
   }
   .content-box .team-members {
     flex-direction: column;
@@ -485,7 +485,8 @@ html {
 /* TABLET RESPONSIVE */
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
   .content-box {
-    max-width: 736px;
+    width: 736px;
+    max-width: 90%;
   }
   .ticket-place {
     width: 234px;
